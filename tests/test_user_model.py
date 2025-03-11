@@ -1,4 +1,4 @@
-from src import UserModel
+from rdm_models import UserModel
 
 
 def test_user_model():
