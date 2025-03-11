@@ -1,11 +1,11 @@
 # RDM Models
 
-A shared library of Pydantic models.
+A shared library of Pydantic models for WEHI RDM.
 
 ## Installation
 
 ```bash
-pip install -e ".[dev]"
+uv sync
 ```
 
 ## Testing
@@ -17,6 +17,5 @@ pytest tests/
 ## Building the Package
 
 ```bash
-pip install build
-python -m build
+uv build
 ```
