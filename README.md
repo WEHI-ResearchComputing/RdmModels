@@ -18,4 +18,7 @@ pytest tests/
 
 ```bash
 uv build
+
+# This builds to $root/dist
+# To use in another project, do `uv pip install /path/to/root/dist/rdm_models-X.Y.Z-py3-none-any.whl`
 ```
