@@ -1,3 +1,3 @@
-from .user_model import UserModel
+from . import merscope
 
-__all__ = ["UserModel"]
+__all__ = ["merscope"]

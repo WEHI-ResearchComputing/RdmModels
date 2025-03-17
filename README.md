@@ -5,17 +5,14 @@ A shared library of Pydantic models for WEHI RDM.
 ## Installation
 
 ```bash
-uv sync
+uv add git+ssh://git@github.com/WEHI-ResearchComputing/RdmModels.git
 ```
 
-## Testing
+## Usage
 
-```bash
-pytest tests/
-```
+```python
+from rdm_models.merscope import Experiment
 
-## Building the Package
-
-```bash
-uv build
+# Parse a JSON input
+parsed = Experiment.model_validate('{"fooBar": 123}')
 ```
