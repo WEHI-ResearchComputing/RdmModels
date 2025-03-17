@@ -2,18 +2,24 @@ from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
 
 
-# For use with JSON input that has camelCase keys
-class BaseModelWithCamelAlias(BaseModel):
+class CamelBase(BaseModel):
+    """
+    Base model for handling JSON input with camelCase keys.
+
+    This configuration converts snake_case attribute names to camelCase keys during
+    serialization and deserialization using Pydantic's alias generator.
+    """
+
     model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
 
 
-class RegionSummary(BaseModelWithCamelAlias):
+class RegionSummary(CamelBase):
     name: str
     start_index: int
     end_index: int
 
 
-class Experiment(BaseModelWithCamelAlias):
+class Experiment(CamelBase):
     software_version: str
     start_date_time: str
     user_id: str
