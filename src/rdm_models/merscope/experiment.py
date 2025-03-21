@@ -20,6 +20,10 @@ class RegionSummary(CamelBase):
 
 
 class Experiment(CamelBase):
+    """
+    Model for the experiment.json metadata file output by the Merscope processing.
+    """
+
     software_version: str
     start_date_time: str
     user_id: str
