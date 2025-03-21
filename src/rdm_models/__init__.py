@@ -1,3 +1,4 @@
+from . import core
 from . import merscope
 
-__all__ = ["merscope"]
+__all__ = ["core", "merscope"]
