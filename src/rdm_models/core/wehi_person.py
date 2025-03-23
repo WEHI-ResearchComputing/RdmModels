@@ -9,4 +9,4 @@ class WehiPerson(BaseModel):
     family_name: str
     email: EmailStr
     # Literal[] does not support variables so repetition is unavoidable
-    affiliation: Literal["https://ror.org/01b6kha49"] = WEHI_ROR_ID
+    ror_id: Literal["https://ror.org/01b6kha49"] = WEHI_ROR_ID
